@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/platformercloud/platformer-cli/cmd/generate"
 	"github.com/platformercloud/platformer-cli/cmd/list"
 	"github.com/platformercloud/platformer-cli/cmd/selectprompt"
 	"github.com/platformercloud/platformer-cli/cmd/set"
@@ -44,6 +45,7 @@ func init() {
 // (these cannot register themselves with init())
 func registerModuleCommands() {
 	rootCmd.AddCommand(list.ListCmd)
+	rootCmd.AddCommand(generate.GenerateCmd)
 	rootCmd.AddCommand(selectprompt.SelectCmd)
 	rootCmd.AddCommand(set.SetCmd)
 }
